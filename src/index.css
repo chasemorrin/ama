@@ -34,11 +34,6 @@ html,
 body {
   margin: 0;
   padding: 0;
-  /* Belt-and-suspenders: nothing on this site is meant to be wider than
-     the screen, so if anything ever miscalculates its width, this stops
-     it from opening up page-wide horizontal scroll rather than just
-     clipping the stray element. */
-  overflow-x: hidden;
 }
 
 body {
@@ -84,13 +79,24 @@ button {
   max-width: 880px;
   margin: 0 auto;
   padding: 28px 20px 64px;
+  /* Belt-and-suspenders: nothing in here is meant to be wider than the
+     screen, so if anything (like a notation staff) ever miscalculates
+     its width, this clips it instead of opening up page-wide horizontal
+     scroll. Deliberately placed here rather than on html/body - overflow
+     other than "visible" on an ancestor silently breaks position:sticky
+     on the navbar, which sits outside .page precisely to avoid that. */
+  overflow-x: hidden;
 }
 
 .topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: var(--bg);
   width: 100%;
   max-width: 880px;
   margin: 0 auto;
-  padding: 20px 20px 0;
+  padding: 16px 20px;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
