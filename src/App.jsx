@@ -1,5 +1,6 @@
 import { Suspense, lazy } from 'react'
 import { HashRouter, Routes, Route } from 'react-router-dom'
+import ScrollToTop from './components/ScrollToTop.jsx'
 import Home from './pages/Home.jsx'
 import SingTetrachord from './pages/SingTetrachord.jsx'
 import BrighterOrDarker from './pages/BrighterOrDarker.jsx'
@@ -23,6 +24,7 @@ const TetrachordMadness = lazy(() => import('./pages/TetrachordMadness.jsx'))
 export default function App() {
   return (
     <HashRouter>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route
