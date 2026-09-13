@@ -3,7 +3,7 @@ import { exercises } from '../data/exercises.js'
 
 export default function Home() {
   return (
-    <div className="page">
+    <>
       <div className="hero">
         <h1 className="wordmark">
           <span className="w1">Chase Morrin's</span>{' '}
@@ -15,21 +15,23 @@ export default function Home() {
         </p>
       </div>
 
-      <div className="pad-grid">
-        {exercises.map((ex) => (
-          <Link key={ex.slug} to={`/${ex.slug}`} className={`pad pad-${ex.color}`}>
-            <span className="pad-note">{ex.note}</span>
-            <div>
-              <div className="pad-title">{ex.title}</div>
-              <div className="pad-tag">{ex.tagline}</div>
-            </div>
-          </Link>
-        ))}
+      <div className="page">
+        <div className="pad-grid">
+          {exercises.map((ex) => (
+            <Link key={ex.slug} to={`/${ex.slug}`} className={`pad pad-${ex.color}`}>
+              <span className="pad-note">{ex.note}</span>
+              <div>
+                <div className="pad-title">{ex.title}</div>
+                <div className="pad-tag">{ex.tagline}</div>
+              </div>
+            </Link>
+          ))}
 
-        <div className="pad pad-more">
-          More exercises coming soon
+          <div className="pad pad-more">
+            More exercises coming soon
+          </div>
         </div>
       </div>
-    </div>
+    </>
   )
 }
