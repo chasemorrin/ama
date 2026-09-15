@@ -775,3 +775,68 @@ button {
 .clave-step-current {
   background: var(--pink) !important;
 }
+
+/* ---------------------------------------------------------
+   Polytonic Modifications
+--------------------------------------------------------- */
+.chord-row {
+  margin-top: 10px;
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.chord-chip {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 10px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  background: var(--deck);
+  color: var(--ink);
+}
+.chord-chip-neutral {
+  background: var(--deck);
+  color: var(--ink);
+  border-color: var(--line);
+}
+.chord-chip-up {
+  background: var(--blue);
+  color: #fff;
+  border-color: var(--blue);
+}
+.chord-chip-down {
+  background: var(--pink);
+  color: #fff;
+  border-color: var(--pink);
+}
+.chord-chip-tritone {
+  background: var(--violet);
+  color: #fff;
+  border-color: var(--violet);
+}
+
+.chord-legend {
+  margin-top: 4px;
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  justify-content: center;
+}
+.chord-legend-dot {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  margin-right: 4px;
+  vertical-align: middle;
+}
+.chord-legend-dot-neutral { background: var(--line); }
+.chord-legend-dot-up { background: var(--blue); }
+.chord-legend-dot-down { background: var(--pink); }
+.chord-legend-dot-tritone { background: var(--violet); }

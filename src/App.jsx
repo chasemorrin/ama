@@ -7,6 +7,7 @@ import BrighterOrDarker from './pages/BrighterOrDarker.jsx'
 import PolarHarmony from './pages/PolarHarmony.jsx'
 import Drone from './pages/Drone.jsx'
 import Claves from './pages/Claves.jsx'
+import PolytonicModifications from './pages/PolytonicModifications.jsx'
 import NotFound from './pages/NotFound.jsx'
 
 // These two pull in VexFlow (a sizeable notation-rendering library), so
@@ -35,6 +36,7 @@ export default function App() {
         <Route path="/polar-harmony" element={<PolarHarmony />} />
         <Route path="/drone" element={<Drone />} />
         <Route path="/claves" element={<Claves />} />
+        <Route path="/polytonic-modifications" element={<PolytonicModifications />} />
         <Route
           path="/rhythm-practice"
           element={

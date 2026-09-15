@@ -55,4 +55,11 @@ export const exercises = [
     color: 'blue',
     note: '▤',
   },
+  {
+    slug: 'polytonic-modifications',
+    title: 'Polytonic Modifications',
+    tagline: 'Generate symmetric chord substitutions for any progression',
+    color: 'pink',
+    note: '♬',
+  },
 ]
